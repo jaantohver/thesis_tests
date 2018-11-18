@@ -65,16 +65,19 @@ _, contours, hierarchy = cv2.findContours(connected.copy(), cv2.RETR_EXTERNAL, c
 
 mask = np.zeros(bw.shape, dtype=np.uint8)
 
+cv2.drawContours(rgb, contours, -1, (0, 255, 0))
+
+cv2.imshow('rects', rgb)
+cv2.waitKey(0)
+
 for idx in range(len(contours)):
     x, y, w, h = cv2.boundingRect(contours[idx])
     mask[y:y+h, x:x+w] = 0
     cv2.drawContours(mask, contours, idx, (255, 255, 255), -1)
     r = float(cv2.countNonZero(mask[y:y+h, x:x+w])) / (w * h)
 
-    # if r > 0.45 and w > 8 and h > 8:
-        # cv2.rectangle(rgb, (x, y), (x+w-1, y+h-1), (0, 255, 0), 2)
-
-cv2.drawContours(rgb, contours, -1, (0, 255, 0))
+    if r > 0.45 and w > 8 and h > 8:
+        cv2.rectangle(rgb, (x, y), (x+w-1, y+h-1), (0, 255, 0), 2)
 
 cv2.imshow('rects', rgb)
 cv2.waitKey(0)
