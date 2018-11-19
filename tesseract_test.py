@@ -18,7 +18,8 @@ imageFiles = [
     'doc_blur/7.jpg',
     'doc_blur/8.jpg',
     'doc_blur/9.jpg',
-    'doc_blur/10.jpg'
+    'doc_blur/10.jpg',
+    'doc_blur/5.jpg'
 ]
 
 boxes = [
@@ -41,21 +42,35 @@ boxes = [
     ((550, 433), (706, 452))    #RESIDENCE PERMIT
 ]
 
-cv2.namedWindow('rects')
+# cv2.namedWindow('rects')
 
-for i in range(0, len(imageFiles)):
-    filename = imageFiles[i]
+fileCounter = 1
 
-    image = cv2.imread(filename)
+for imageFile in imageFiles:
+    image = cv2.imread(imageFile)
+
+    boxCounter = 1
 
     for box in boxes:
-        box = boxes[i]
-
         text = image[box[0][1]:box[1][1], box[0][0]:box[1][0]]
 
-        cv2.imwrite('cutouts/' + str(i) + '.jpg', text)
+        cv2.rectangle(image, box[0], box[1], (0, 255, 0))
+        cv2.imwrite('doc_blur/5_segment.jpg', image)
 
-    subprocess.check_output(['tesseract', 'cutout_list.txt', 'tess_results/out' + str(i), '-l', 'est+eng', '--psm', '11'])
+        cv2.imwrite('cutouts/' + str(fileCounter) + '_' + str(boxCounter) + '.jpg', text)
+
+        subprocess.check_output(
+            ['tesseract',
+            'cutouts/' + str(fileCounter) + '_' + str(boxCounter) + '.jpg',
+            'tess_results/out' + str(fileCounter) + '_' + str(boxCounter),
+            '-l',
+            'est',
+            '--psm',
+            '8'])
+
+        boxCounter += 1
+
+    fileCounter += 1
 
     # tree = ET.parse('out.hocr')
     # root = tree.getroot()
@@ -65,4 +80,5 @@ for i in range(0, len(imageFiles)):
 
     #     cv2.rectangle(img, (int(x), int(y)), (int(x2), int(y2)), (0, 255, 0), 2)
 
-cv2.destroyWindow('rects')
+# cv2.waitKey(0)
+# cv2.destroyWindow('rects')
