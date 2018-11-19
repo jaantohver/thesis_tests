@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -std=c++11 -fopenmp -Wall   -shared -Wl,-soname,libcrnn.so -o libcrnn.so CMakeFiles/crnn.dir/init.cpp.o CMakeFiles/crnn.dir/ctc.cpp.o -Wl,-rpath,/usr/local/lib:/home/j/torch/install/lib /usr/local/lib/libthpp.so /home/j/torch/install/lib/libluaT.so /home/j/torch/install/lib/libTH.so /home/j/torch/install/lib/libTHC.so 
