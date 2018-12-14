@@ -44,4 +44,4 @@ for i in range(0, len(boxes)):
 
     text = image[box[0][1]:box[1][1], box[0][0]:box[1][0]]
 
-    cv2.imwrite('cutouts/' + str(i) + '.jpg', text)
+    cv2.imwrite('cutouts_srn/' + str(i) + '.jpg', text)

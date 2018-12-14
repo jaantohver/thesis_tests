@@ -77,13 +77,13 @@ for filename, attr in dirtree("../../cutouts_blur") do
 			local img = loadAndResizeImage(imagePath)
 
 			if (img ~= nil) then
-				--local text, raw = recognizeImageLexiconFree(model, img)
+				local text, raw = recognizeImageLexiconFree(model, img)
 
-				lex = {"elamisluba", "nimi", "kehtivkuni", "valjaandmisekohtjakuupaev", "loaliik", "elamislubatootamiseks", "markused", "residencepermit", "foremployment", "kuni", "until"}
+				--lex = {"elamisluba", "nimi", "kehtivkuni", "valjaandmisekohtjakuupaev", "loaliik", "elamislubatootamiseks", "markused", "residencepermit", "foremployment", "kuni", "until"}
 
-				local text = recognizeImageWithLexicion(model, img, lex)
+				--local text = recognizeImageWithLexicion(model, img, lex)
 
-				file = io.open("../../crnn_results/out" .. fileName .. ".txt", "w")
+				file = io.open("../../crnn_results/srn_out" .. fileName .. ".txt", "w")
 				file:write(text)
 				file:close()
 
