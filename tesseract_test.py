@@ -18,8 +18,20 @@ imageFiles = [
     'doc_blur/7.jpg',
     'doc_blur/8.jpg',
     'doc_blur/9.jpg',
-    'doc_blur/10.jpg',
-    'doc_blur/5.jpg'
+    'doc_blur/10.jpg'
+]
+
+imageFiles = [
+    'srndeblur_out/1.jpg',
+    'srndeblur_out/2.jpg',
+    'srndeblur_out/3.jpg',
+    'srndeblur_out/4.jpg',
+    'srndeblur_out/5.jpg',
+    'srndeblur_out/6.jpg',
+    'srndeblur_out/7.jpg',
+    'srndeblur_out/8.jpg',
+    'srndeblur_out/9.jpg',
+    'srndeblur_out/10.jpg'
 ]
 
 boxes = [
@@ -54,19 +66,19 @@ for imageFile in imageFiles:
     for box in boxes:
         text = image[box[0][1]:box[1][1], box[0][0]:box[1][0]]
 
-        cv2.rectangle(image, box[0], box[1], (0, 255, 0))
-        cv2.imwrite('doc_blur/5_segment.jpg', image)
+        #cv2.rectangle(image, box[0], box[1], (0, 255, 0))
+        #cv2.imwrite('doc_blur/5_segment.jpg', image)
 
         cv2.imwrite('cutouts/' + str(fileCounter) + '_' + str(boxCounter) + '.jpg', text)
 
-        subprocess.check_output(
-            ['tesseract',
-            'cutouts/' + str(fileCounter) + '_' + str(boxCounter) + '.jpg',
-            'tess_results/out' + str(fileCounter) + '_' + str(boxCounter),
-            '-l',
-            'est',
-            '--psm',
-            '8'])
+        #subprocess.check_output(
+        #    ['tesseract',
+        #    'cutouts/' + str(fileCounter) + '_' + str(boxCounter) + '.jpg',
+        #    'tess_results/out' + str(fileCounter) + '_' + str(boxCounter),
+        #    '-l',
+        #    'est',
+        #    '--psm',
+        #    '8'])
 
         boxCounter += 1
 
