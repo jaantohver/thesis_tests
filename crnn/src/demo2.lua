@@ -63,7 +63,7 @@ end
 local count = 0.0
 local accurate = 0.0
 
-for filename, attr in dirtree("../../cutouts_blur") do
+for filename, attr in dirtree("../../cutouts") do
 	--local imagePath = '../data/demo.png'
 	--local imagePath = '/home/j/Desktop/OCR-Benchmark-images/eng-scan-100-dpi-2.jpg'
 

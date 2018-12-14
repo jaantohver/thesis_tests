@@ -54,7 +54,7 @@ boxes = [
     ((550, 433), (706, 452))    #RESIDENCE PERMIT
 ]
 
-# cv2.namedWindow('rects')
+cv2.namedWindow('rects')
 
 fileCounter = 1
 
@@ -92,5 +92,5 @@ for imageFile in imageFiles:
 
     #     cv2.rectangle(img, (int(x), int(y)), (int(x2), int(y2)), (0, 255, 0), 2)
 
-# cv2.waitKey(0)
-# cv2.destroyWindow('rects')
+cv2.waitKey(0)
+cv2.destroyWindow('rects')
