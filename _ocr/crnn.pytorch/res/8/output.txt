@@ -1,0 +1,18 @@
+e---l-a--m-iis-l--u--b-a-- elamisluba elamisluba
+5---------n-2--1-6--5--5-- 5n21655 bb0021535
+c------------------------- c nimi
+a---n-d--a-r-j--a-f-e--n-- andarjafen anbarjafari
+g---h--o-l--a-m-r--e-z-za- gholamrezza gholamreza
+c-----a----v---i---n--s--- cavins kehtivkuni
+a---s---c--a---z--e-z----- ascazez 05082021
+u--------a---d--t--u--e--- uadtue väljaandmisekohtjakuupäev
+p----a---n-s----a-z--ze--- pansazze ppa05082016
+l--------------------e---- le loaliik
+c---n-g----a-t----in-n--s- cngatinns elamislubatöötamiseks
+w-------a--i--s--t-e--d--- waisted märkused
+r--e-i-c-e-m--e-t-e--m--e- reicemeteme residencepermit
+f--o-r-e-m-p-loo-m--e-n-t- foremploment foremployment
+ii--n---o-n--t-a--n--i-e-- inontanie kuniuntil31082021
+l-----0---0---6---8---8--- l00688 400688
+r--e-iid-en-c-e-p-e-r-n--- reidencepern residencepermit
+True count =  1; false count = 16; accuracy = 17.0%

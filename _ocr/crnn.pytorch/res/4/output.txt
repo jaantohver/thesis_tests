@@ -1,0 +1,18 @@
+e---l-a--w---s-l--u-b--a-- elawsluba elamisluba
+b---b-o--0--2--1-6--5--5-- bbo021655 bb0021535
+c------------------------- c nimi
+a---n-b--a-r-j-aaf--a-r-i- anbarjafari anbarjafari
+c---h--o--u-a-v-rr-e-zz--- chouavrez gholamreza
+s------a----r---t--e--n--- sarten kehtivkuni
+o----s-c---a---zz---z----- oscazz 05082021
+m-----r--m---r---a-w---s-- mrmraws väljaandmisekohtjakuupäev
+p--r--a--o-s-o--n-zi-n-g-- praosonzing ppa05082016
+v---------------o-----t--- vot loaliik
+e---n-b-up-at--othh---d-s- enbupatothds elamislubatöötamiseks
+c-------o---n----b---u---- conbu märkused
+r--e-s-c-en-c-e-p-e-enit-- rescencepeenit residencepermit
+f--o-r-e-m-p-lo--m--e--n-- foremplomen foremployment
+k---n-v-----l--s--m--e-d-- knvlsmed kuniuntil31082021
+4-----0---0---6---8---8--- 400688 400688
+r--e-s-d-en-c-e-p-e-e-a-t- resdencepeeat residencepermit
+True count =  2; false count = 15; accuracy = 8.5%

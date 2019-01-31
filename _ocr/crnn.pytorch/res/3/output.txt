@@ -1,0 +1,18 @@
+e---l-a--m-iis-l--u-b--a-- elamisluba elamisluba
+b---r-0--0--2--1-5--3--5-- br0021535 bb0021535
+c------------------------- c nimi
+a---n-b--a-r-j-aaf--a-r-i- anbarjafari anbarjafari
+g---h--o-ll-a-v--r-e-z--a- gholavreza gholamreza
+b------e---v----i--e------ bevie kehtivkuni
+0---5---0--8---2--0--2-1-- 05082021 05082021
+h-----a--m---e---i-u---e-- hameiue väljaandmisekohtjakuupäev
+p--r--a--c-ss-o-n-zz--1g-- pracsonz1g ppa05082016
+m---------o----l------s--- mols loaliik
+e-----s-u--att-othhnnes-s- esuatothness elamislubatöötamiseks
+w-----------u---t----e---- wute märkused
+r--e-sdd-en-c-e-p-ea-n-n-- resdencepeann residencepermit
+f--o-r-e-m-p-l-o-m-meen-t- foremplomment foremployment
+k-o-n-v-u-iil--ii-a--m---- konvuiliam kuniuntil31082021
+4-----0---0---6---8---8--- 400688 400688
+r--e-sid-en-c-e-p-e-r-n-t- residencepernt residencepermit
+True count =  4; false count = 13; accuracy = 4.25%

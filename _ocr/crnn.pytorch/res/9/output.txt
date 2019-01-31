@@ -1,0 +1,18 @@
+e---l-a--m-iis-l--u--b-a-- elamisluba elamisluba
+b---r--o--o--z-i-e--s--3-- broozies3 bb0021535
+c------------------------- c nimi
+a---m-b-aa-rl--a-f-a--r--- ambarlafar anbarjafari
+c---h--o--l-a-u-r--e--z--- cholaurez gholamreza
+-------------------e------ e kehtivkuni
+c-------o-------v---e----- cove 05082021
+v-----a--r---m---i-n---s-- varmins väljaandmisekohtjakuupäev
+p----a-----s--a----n---e-- pasane ppa05082016
+j------------------------- j loaliik
+e--n--g----a-t-o-n-iees-s- engatoniess elamislubatöötamiseks
+c---------------t---s----- cts märkused
+b-----------a---r-a----r-- barar residencepermit
+s----t-a---p-----m--e--n-- stapmen foremployment
+s----u----m----t--a---n--- sumtan kuniuntil31082021
+l-----o---o---s---s---s--- loosss 400688
+b-----o----c------a----r-- bocar residencepermit
+True count =  1; false count = 16; accuracy = 17.0%

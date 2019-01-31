@@ -1,0 +1,18 @@
+e---l-a--m--is-l--u--b-a-- elamisluba elamisluba
+b---o--o--n----e--s-s--s-- boonesss bb0021535
+c------------------------- c nimi
+a---m-b-aa-r-i-a--t-e-r--- ambariater anbarjafari
+g---h-o--u---m--r--e--zz-- ghoumrez gholamreza
+s------a--------e---e----- saee kehtivkuni
+o---s--ev--e---z-i---n---- osevezin 05082021
+w----r---n---c--h--e--s--- wrnches väljaandmisekohtjakuupäev
+p--r-a---n-s--o-l-iin--g-- pransoling ppa05082016
+m--------------u---------- mu loaliik
+c---n--------------n-ee--- cnne elamislubatöötamiseks
+b------------s---e---d---- bsed märkused
+r--e-i-d-en-c-e-t-e-am--t- reidenceteamt residencepermit
+f--o-r-e-w-p-l-o-m--e--t-- forewplomet foremployment
+i----n-----t-l-i--a--tt-s- intliats kuniuntil31082021
+1-----0---0---6---8---8--- 100688 400688
+r--e-s-d-en-c-e-p-e-a-nt-- resdencepeant residencepermit
+True count =  1; false count = 16; accuracy = 17.0%
