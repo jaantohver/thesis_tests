@@ -1,15 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os
 import cv2
 import sys
 import numpy as np
+from subprocess import call
 
-filename = sys.argv[1]
+if len(sys.argv) < 2:
+    print("No input folder specified.")
+    exit()
+
+input_folder = sys.argv[1]
 
 boxes = [
-    ((365, 95), (487, 117)),   # ELAMISLUBA
-    ((572, 98), (698, 119)),   # BB0021535
+    ((365, 95), (487, 117)),  # ELAMISLUBA
+    ((572, 98), (698, 119)),  # BB0021535
     ((328, 137), (352, 151)),  # NIMI
     ((329, 154), (455, 171)),  # ANBARJAFARI
     ((329, 171), (455, 189)),  # GHOLAMREZA
@@ -27,21 +33,25 @@ boxes = [
     ((550, 433), (706, 452)),  # RESIDENCE PERMIT
 ]
 
-# cv2.namedWindow('rects')
+call(["rm", "-rf", "res"])
+call(["mkdir", "res"])
 
-image = cv2.imread(filename)
+for file in os.listdir(input_folder):
+    if ".jpg" not in file:
+        continue
 
-for box in boxes:
-    cv2.rectangle(image, box[0], box[1], (0, 255, 0))
+    full_path = input_folder + '/' + file
 
-# cv2.imshow('rects', image)
-# cv2.waitKey(0)
+    image = cv2.imread(full_path)
 
-# cv2.destroyWindow('rects')
+    for box in boxes:
+        cv2.rectangle(image, box[0], box[1], (0, 255, 0))
 
-for i in range(0, len(boxes)):
-    box = boxes[i]
+    call(["mkdir", "res/" + file.split(".")[0]])
 
-    text = image[box[0][1]:box[1][1], box[0][0]:box[1][0]]
+    for i in range(0, len(boxes)):
+        box = boxes[i]
 
-    cv2.imwrite('cutouts/' + str(i) + '.jpg', text)
+        text = image[box[0][1]:box[1][1], box[0][0]:box[1][0]]
+
+        cv2.imwrite('res/' + file.split(".")[0] + '/' + str(i) + '.jpg', text)
