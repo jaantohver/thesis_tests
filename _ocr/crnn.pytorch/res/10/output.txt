@@ -16,3 +16,4 @@ i---------n----a--a---n--- inaan kuniuntil31082021
 l-----o---o---s---e---s--- looses 400688
 r--e-s-d-en-c-e-p-e-aa-n-- resdencepean residencepermit
 Accuracy = 0%
+Relative accuracy = 30.321578652028478%

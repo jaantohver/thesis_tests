@@ -15,4 +15,5 @@ f--o-r-e-m-p-loo-m--e-n-t- foremploment foremployment
 ii--n---o-n--t-a--n--i-e-- inontanie kuniuntil31082021
 l-----0---0---6---8---8--- l00688 400688
 r--e-iid-en-c-e-p-e-r-n--- reidencepern residencepermit
-True count =  1; false count = 16; accuracy = 17.0%
+True count =  1; false count = 16; accuracy = 5.882352941176471%
+Relative accuracy = 42.21658963873497%

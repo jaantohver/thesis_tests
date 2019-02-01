@@ -15,4 +15,5 @@ f--o-r-e-w-p-l-o-m--e--t-- forewplomet foremployment
 i----n-----t-l-i--a--tt-s- intliats kuniuntil31082021
 1-----0---0---6---8---8--- 100688 400688
 r--e-s-d-en-c-e-p-e-a-nt-- resdencepeant residencepermit
-True count =  1; false count = 16; accuracy = 17.0%
+True count =  1; false count = 16; accuracy = 5.882352941176471%
+Relative accuracy = 37.561928075768904%

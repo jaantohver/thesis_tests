@@ -15,4 +15,5 @@ s----t-a---p-----m--e--n-- stapmen foremployment
 s----u----m----t--a---n--- sumtan kuniuntil31082021
 l-----o---o---s---s---s--- loosss 400688
 b-----o----c------a----r-- bocar residencepermit
-True count =  1; false count = 16; accuracy = 17.0%
+True count =  1; false count = 16; accuracy = 5.882352941176471%
+Relative accuracy = 23.625033367247898%

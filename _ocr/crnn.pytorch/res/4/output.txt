@@ -15,4 +15,5 @@ f--o-r-e-m-p-lo--m--e--n-- foremplomen foremployment
 k---n-v-----l--s--m--e-d-- knvlsmed kuniuntil31082021
 4-----0---0---6---8---8--- 400688 400688
 r--e-s-d-en-c-e-p-e-e-a-t- resdencepeeat residencepermit
-True count =  2; false count = 15; accuracy = 8.5%
+True count =  2; false count = 15; accuracy = 11.764705882352942%
+Relative accuracy = 44.53733751830637%

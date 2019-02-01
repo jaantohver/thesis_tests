@@ -15,4 +15,5 @@ f--o-r-e-m-ppl-oyym-e-n-t- foremployment foremployment
 k-o-n-v-u-nt-l-si-n--ne--- konvuntlsinne kuniuntil31082021
 4-----0---0---6---8---8--- 400688 400688
 rr-es-id-en-c-e-p-er-m-it- residencepermit residencepermit
-True count =  6; false count = 11; accuracy = 2.8333333333333335%
+True count =  6; false count = 11; accuracy = 35.294117647058826%
+Relative accuracy = 66.65222167298293%

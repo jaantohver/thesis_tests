@@ -16,3 +16,4 @@ u---n-i-u-i-l--a--u---e--- uniuilaue kuniuntil31082021
 1-----0---0---6---8---8--- 100688 400688
 r---s-c--n--c-e-p-e-a-n--- rscncepean residencepermit
 Accuracy = 0%
+Relative accuracy = 43.95306462088468%
