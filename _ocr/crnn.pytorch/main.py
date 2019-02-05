@@ -6,13 +6,10 @@ if len(sys.argv) < 2:
     exit()
 
 if len(sys.argv) < 3:
-    print("No ground truth list specified.")
+    print("No output folder specified.")
     exit()
 
 input_folder = sys.argv[1]
-ground_truth = sys.argv[2:]
+output_folder = sys.argv[2]
 
-call(["rm", "-rf", "res"])
-call(["mkdir", "res"])
-
-call(["python", "demo.py", input_folder] + ground_truth)
+call(["python", "demo.py", input_folder, output_folder])

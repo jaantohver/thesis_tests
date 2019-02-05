@@ -1,0 +1,9 @@
+märkused - aap - 0.0
+kehtivkuni - ab - 0.0
+loaliik - mu - 0.0
+väljaandmisekohtjakuupäev - mikk2 - 16.0
+residencepermit - jehdencepermit - 80.0
+nimi - e - 0.0
+elamisluba - elaimisuuba - 81.81818181818183
+Accuracy = 0%
+Relative accuracy = 25.402597402597404%

@@ -1,0 +1,9 @@
+märkused - sonea - 12.5
+kehtivkuni - fe - 10.0
+loaliik - wed - 0.0
+väljaandmisekohtjakuupäev - aamotium - 24.0
+residencepermit - rescacepean - 46.666666666666664
+nimi - c - 0.0
+elamisluba - elamisluba - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 27.595238095238095%

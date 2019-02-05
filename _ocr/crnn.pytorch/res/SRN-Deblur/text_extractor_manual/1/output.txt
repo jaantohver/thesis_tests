@@ -1,0 +1,9 @@
+märkused - mawad - 25.0
+kehtivkuni - couvoue - 20.0
+loaliik - loaten - 42.857142857142854
+väljaandmisekohtjakuupäev - iecain - 12.0
+residencepermit - residencepeamit - 93.33333333333333
+nimi - cn - 0.0
+elamisluba - elamisluba - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 41.8843537414966%

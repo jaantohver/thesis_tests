@@ -1,0 +1,9 @@
+märkused		aoe		12.5
+kehtivkuni				0.0
+loaliik				0.0
+väljaandmisekohtjakuupäev		iarar		8.0
+residencepermit		soxc		13.333333333333334
+nimi				0.0
+elamisluba		elamisuba		90.0
+Accuracy = 0%
+Relative accuracy = 17.69047619047619%

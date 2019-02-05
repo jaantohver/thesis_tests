@@ -1,0 +1,9 @@
+märkused - md - 25.0
+kehtivkuni - aed - 10.0
+loaliik -  - 0.0
+väljaandmisekohtjakuupäev - eoeea - 12.0
+residencepermit - residencepermit - 100.0
+nimi - 3 - 0.0
+elamisluba - elamisuuba - 90.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 33.85714285714286%

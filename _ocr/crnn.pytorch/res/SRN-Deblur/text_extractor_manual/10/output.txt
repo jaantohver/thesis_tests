@@ -1,0 +1,9 @@
+märkused - cn - 0.0
+kehtivkuni - gote - 10.0
+loaliik - jate - 14.285714285714285
+väljaandmisekohtjakuupäev - nadwiet - 20.0
+residencepermit - resdenceperin - 80.0
+nimi - c - 0.0
+elamisluba - elamsluba - 90.0
+Accuracy = 0%
+Relative accuracy = 30.612244897959183%

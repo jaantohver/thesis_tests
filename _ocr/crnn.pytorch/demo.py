@@ -18,6 +18,7 @@ if len(sys.argv) < 3:
     exit()
 
 input_folder = sys.argv[1]
+output_folder = sys.argv[2]
 
 model_path = './data/crnn.pth'
 alphabet = '0123456789abcdefghijklmnopqrstuvwxyz'
@@ -66,61 +67,63 @@ def levenshtein(seq1, seq2):
 
 for dirname, dirnames, filenames in os.walk(input_folder):
     if len(filenames) > 0:
-        count = 0
-        relativeAccuracy = 0
-        filenames.sort(key=lambda x: float(x.split(".")[0]))
-        parts = dirname.split("/")
-        subdir = parts[len(parts) - 1]
+        if any('jpg' in s for s in filenames):
+            count = 0
+            relativeAccuracy = 0
+            true_count = 0
+            false_count = 0
+            file_count = sum(1 for _ in ('jpg' in s for s in filenames))
 
-        call(["rm", "-rf", "res/" + subdir])
-        call(["mkdir", "res/" + subdir])
-        call(["touch", "res/" + subdir + "/output.txt"])
+            res_folder = "res/" + output_folder + '/' + dirname.split('/')[-1]
+            res_file = res_folder + "/output.txt"
+            call(["mkdir", "-p", res_folder])
+            call(["touch", res_file])
 
-        true_count = 0
-        false_count = 0
+            for filename in filenames:
+                if ".jpg" not in filename:
+                    continue
 
-        for filename in filenames:
-            true_label = sys.argv[2 + count]
-            true_label = ''.join(e for e in true_label if e.isalnum()).lower()
+                true_label = filename.split('.')[0]
+                true_label = ''.join(e for e in true_label if e.isalnum()).lower()
 
-            full_path = dirname + "/" + filename
+                full_path = dirname + "/" + filename
 
-            image = Image.open(full_path).convert('L')
-            image = transformer(image)
-            if torch.cuda.is_available():
-                image = image.cuda()
-            image = image.view(1, *image.size())
-            image = Variable(image)
+                image = Image.open(full_path).convert('L')
+                image = transformer(image)
+                if torch.cuda.is_available():
+                    image = image.cuda()
+                image = image.view(1, *image.size())
+                image = Variable(image)
 
-            model.eval()
-            preds = model(image)
+                model.eval()
+                preds = model(image)
 
-            _, preds = preds.max(2)
-            preds = preds.transpose(1, 0).contiguous().view(-1)
+                _, preds = preds.max(2)
+                preds = preds.transpose(1, 0).contiguous().view(-1)
 
-            preds_size = Variable(torch.IntTensor([preds.size(0)]))
-            raw_pred = converter.decode(preds.data, preds_size.data, raw=True)
-            sim_pred = converter.decode(preds.data, preds_size.data, raw=False)
+                preds_size = Variable(torch.IntTensor([preds.size(0)]))
+                raw_pred = converter.decode(preds.data, preds_size.data, raw=True)
+                sim_pred = converter.decode(preds.data, preds_size.data, raw=False)
 
-            f = open("res/" + subdir + "/output.txt", "a")
-            f.write(str(raw_pred) + " " + str(sim_pred) + " " + str(true_label) + "\n")
+                count += 1
 
-            count += 1
+                if true_label == sim_pred:
+                    true_count += 1
+                else:
+                    false_count += 1
 
-            if true_label == sim_pred:
-                true_count += 1
+                levDis = levenshtein(true_label, sim_pred)
+                bigger = max(len(true_label), len(sim_pred))
+                pct = (bigger - levDis) / bigger
+                relativeAccuracy += (pct * 100) / file_count
+
+                f = open(res_file, "a")
+                f.write(str(true_label) + " - " + str(sim_pred) + " - " + str(pct * 100) + "\n")
+
+            if true_count is 0:
+                f.write("Accuracy = 0%\n")
             else:
-                false_count += 1
+                f.write("True count = " + " " + str(true_count) + "; false count = " + str(false_count) +
+                        "; accuracy = " + str(true_count * 100 / count) + "%\n")
 
-            levDis = levenshtein(true_label, sim_pred)
-            bigger = max(len(true_label), len(sim_pred))
-            pct = (bigger - levDis) / bigger
-            relativeAccuracy += (pct * 100) / 17
-
-        if true_count is 0:
-            f.write("Accuracy = 0%\n")
-        else:
-            f.write("True count = " + " " + str(true_count) + "; false count = " + str(false_count) +
-                    "; accuracy = " + str(true_count * 100 / count) + "%\n")
-
-        f.write("Relative accuracy = " + str(relativeAccuracy) + "%\n")
+            f.write("Relative accuracy = " + str(relativeAccuracy) + "%\n")

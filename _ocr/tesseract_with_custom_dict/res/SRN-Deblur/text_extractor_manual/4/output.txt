@@ -1,0 +1,9 @@
+märkused		2nts		12.5
+kehtivkuni		crecme		0.0
+loaliik		aom		14.285714285714285
+väljaandmisekohtjakuupäev		aat2caettey		20.0
+residencepermit		residencepermat		93.33333333333333
+nimi				0.0
+elamisluba		elamesluba		90.0
+Accuracy = 0%
+Relative accuracy = 32.874149659863946%

@@ -1,12 +1,18 @@
+import os
 import cv2
 import sys
+from subprocess import call
 
 if len(sys.argv) < 2:
-    print("No image file specified.")
+    print("No input folder specified.")
     exit()
 
-filename = sys.argv[1]
+if len(sys.argv) < 3:
+    print("No output folder specified.")
+    exit()
 
+input_folder = sys.argv[1]
+output_folder = sys.argv[2]
 # cv2.namedWindow("result")
 
 
@@ -38,7 +44,7 @@ def detectLetters(img):
     # cv2.imshow('result', img_threshold)
     # cv2.waitKey(0)
 
-    _, contours, _ = cv2.findContours(img_threshold, 0, 1)
+    contours, _ = cv2.findContours(img_threshold, 0, 1)
 
     for contour in contours:
         if len(contour) > 100:
@@ -57,42 +63,64 @@ def detectLetters(img):
 
     return boundRect
 
-# Read
-# cv::Mat img1=cv::imread("side_1.jpg");
-img1 = cv2.imread(filename)
+call(["rm", "-rf", "res"])
+call(["mkdir", "res"])
 
-# cv::Mat img2=cv::imread("side_2.jpg");
-# img2 = cv2.imread("id_2.jpg")
+files = os.listdir(input_folder)
+files.sort()
 
-# Detect
-# std::vector<cv::Rect> letterBBoxes1=detectLetters(img1);
-letterBBoxes1 = detectLetters(img1)
+for file in files:
+    if ".jpg" not in file:
+        continue
 
-# std::vector<cv::Rect> letterBBoxes2=detectLetters(img2);
-# letterBBoxes2 = detectLetters(img2)
+    call(["mkdir", "-p", "res/" + output_folder + "/" + file.split('.')[0]])
 
-# Display
-# for(int i=0; i< letterBBoxes1.size(); i++)
-for i in range(len(letterBBoxes1)):
-    # cv::rectangle(img1,letterBBoxes1[i],cv::Scalar(0,255,0),3,8,0);
-    pt1 = (letterBBoxes1[i][0], letterBBoxes1[i][1])
-    pt2 = (letterBBoxes1[i][0] + letterBBoxes1[i][2], letterBBoxes1[i][1] + letterBBoxes1[i][3])
-    cv2.rectangle(img1, pt1, pt2, (0, 255, 0), 3, 8, 0)
-# cv::imwrite( "imgOut1.jpg", img1);
-# cv2.imwrite("imgOut1.jpg", img1)
+    # Read
+    # cv::Mat img1=cv::imread("side_1.jpg");
+    img1 = cv2.imread(input_folder + "/" + file)
 
-# cv2.imshow("result", img1)
-# cv2.waitKey(0)
-# cv2.destroyWindow("result")
+    # cv::Mat img2=cv::imread("side_2.jpg");
+    # img2 = cv2.imread("id_2.jpg")
 
-# for(int i=0; i< letterBBoxes2.size(); i++)
-# for i in range(len(letterBBoxes2)):
-    # cv::rectangle(img2,letterBBoxes2[i],cv::Scalar(0,255,0),3,8,0);
-    # pt1 = (letterBBoxes2[i][0], letterBBoxes2[i][1])
-    # pt2 = (letterBBoxes2[i][0] + letterBBoxes2[i][2], letterBBoxes2[i][1] + letterBBoxes2[i][3])
-    # cv2.rectangle(img2, pt1, pt2, (0, 255, 0), 3, 8, 0)
-# cv::imwrite( "imgOut2.jpg", img2);
-# cv2.imwrite("imgOut2.jpg", img2)
+    # Detect
+    # std::vector<cv::Rect> letterBBoxes1=detectLetters(img1);
+    letterBBoxes1 = detectLetters(img1)
+
+    # std::vector<cv::Rect> letterBBoxes2=detectLetters(img2);
+    # letterBBoxes2 = detectLetters(img2)
+
+    # Display
+    # for(int i=0; i< letterBBoxes1.size(); i++)
+    for i in range(len(letterBBoxes1)):
+        # cv::rectangle(img1,letterBBoxes1[i],cv::Scalar(0,255,0),3,8,0);
+        pt1 = (letterBBoxes1[i][0], letterBBoxes1[i][1])
+        pt2 = (letterBBoxes1[i][0] + letterBBoxes1[i][2], letterBBoxes1[i][1] + letterBBoxes1[i][3])
+        cv2.rectangle(img1, pt1, pt2, (0, 255, 0), 3, 8, 0)
+        # cv2.imshow('result', img1)
+        # cv2.waitKey(0)
+
+        print(pt1)
+        print(pt2)
+        print("---")
+        # text = img1[pt1[0], pt2]
+        text = img1[pt1[1]:pt2[1], pt1[0]:pt2[0]]
+
+        cv2.imwrite('res/' + output_folder + '/' + file.split('.')[0] + '/' + str(i) + '.jpg', text)
+    # cv::imwrite( "imgOut1.jpg", img1);
+    # cv2.imwrite("imgOut1.jpg", img1)
+
+    # cv2.imshow("result", img1)
+    # cv2.waitKey(0)
+    # cv2.destroyWindow("result")
+
+    # for(int i=0; i< letterBBoxes2.size(); i++)
+    # for i in range(len(letterBBoxes2)):
+        # cv::rectangle(img2,letterBBoxes2[i],cv::Scalar(0,255,0),3,8,0);
+        # pt1 = (letterBBoxes2[i][0], letterBBoxes2[i][1])
+        # pt2 = (letterBBoxes2[i][0] + letterBBoxes2[i][2], letterBBoxes2[i][1] + letterBBoxes2[i][3])
+        # cv2.rectangle(img2, pt1, pt2, (0, 255, 0), 3, 8, 0)
+    # cv::imwrite( "imgOut2.jpg", img2);
+    # cv2.imwrite("imgOut2.jpg", img2)
 
 
 print("Done!")

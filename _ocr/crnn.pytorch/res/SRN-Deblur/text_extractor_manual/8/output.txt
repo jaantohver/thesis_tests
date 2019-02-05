@@ -1,0 +1,9 @@
+märkused - warrtes - 25.0
+kehtivkuni - eavies - 20.0
+loaliik - loe - 28.57142857142857
+väljaandmisekohtjakuupäev - vnwing - 12.0
+residencepermit - reidencepern - 73.33333333333333
+nimi - c - 0.0
+elamisluba - elamisluba - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 36.98639455782313%

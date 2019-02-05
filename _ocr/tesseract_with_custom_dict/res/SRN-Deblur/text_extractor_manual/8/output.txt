@@ -1,0 +1,9 @@
+märkused		amete		12.5
+kehtivkuni		te		10.0
+loaliik				0.0
+väljaandmisekohtjakuupäev		sesos		12.0
+residencepermit		residencepermet		93.33333333333333
+nimi				0.0
+elamisluba		elamisluba		100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 32.547619047619044%

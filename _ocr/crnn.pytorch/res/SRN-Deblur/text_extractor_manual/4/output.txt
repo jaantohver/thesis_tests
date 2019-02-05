@@ -1,0 +1,9 @@
+märkused - coutu - 12.5
+kehtivkuni - somts - 10.0
+loaliik - naon - 14.285714285714285
+väljaandmisekohtjakuupäev - mamwawn - 12.0
+residencepermit - resdencepeeat - 73.33333333333333
+nimi - c - 0.0
+elamisluba - elawsluba - 80.0
+Accuracy = 0%
+Relative accuracy = 28.874149659863946%

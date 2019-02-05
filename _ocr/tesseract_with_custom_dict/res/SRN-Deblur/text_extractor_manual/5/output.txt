@@ -1,0 +1,9 @@
+märkused		markused		87.5
+kehtivkuni		weenyke		20.0
+loaliik		laetk		42.857142857142854
+väljaandmisekohtjakuupäev		valinamdetont1aruoproy		40.0
+residencepermit		residencepermit		100.0
+nimi		nea		25.0
+elamisluba		elamisluba		100.0
+True count =  2; false count = 5; accuracy = 28.571428571428573%
+Relative accuracy = 59.33673469387755%

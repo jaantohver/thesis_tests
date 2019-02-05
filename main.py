@@ -10,35 +10,37 @@ input_folder = sys.argv[1]
 # TODO make this dynamic somehow
 ground_truth = [
     "ELAMISLUBA",
-    "BB0021535",
+    # "BB0021535",
     "NIMI",
-    "ANBARJAFARI",
-    "GHOLAMREZA",
+    # "ANBARJAFARI",
+    # "GHOLAMREZA",
     "KEHTIV KUNI",
-    "05.08.2021",
+    # "05.08.2021",
     "VÄLJAANDMISE KOHT JA KUUPÄEV",
-    "PPA, 05.08.2016",
+    # "PPA, 05.08.2016",
     "LOA LIIK",
-    "ELAMISLUBA TÖÖTAMISEKS",
+    # "ELAMISLUBA TÖÖTAMISEKS",
     "MÄRKUSED",
-    "RESIDENCE PERMIT",
-    "FOR EMPLOYMENT",
-    "KUNI/UNTIL 31.08.2021",
-    "400688",
+    # "RESIDENCE PERMIT",
+    # "FOR EMPLOYMENT",
+    # "KUNI/UNTIL 31.08.2021",
+    # "400688",
     "RESIDENCE PERMIT"
 ]
 
-extract_with = [
-    # ("text_extractor", False),
-    # ("text_extractor_2", False),
-    ("text_extractor_manual", True)
-]
 deblur_with = [
-    ("SRN-Deblur", False)
+    ("SRN-Deblur", False),
+]
+extract_with = [
+    ("text_extractor", False),
+    ("text_extractor_2", True),
+    ("text_extractor_manual", False),
 ]
 ocr_with = [
     ("crnn", False),
-    ("crnn.pytorch", True)
+    ("crnn.pytorch", False),
+    ("tesseract", False),
+    ("tesseract_with_custom_dict", False),
 ]
 
 for value in deblur_with:
@@ -54,12 +56,12 @@ for value in deblur_with:
 
     res = call(["python", "main.py", "../../" + input_folder], cwd=deblur_path)
 
-for value in deblur_with:
-    d_script, _ = value
+for d_value in deblur_with:
+    d_script, _ = d_value
     d_result = "../../_deblurring/" + d_script + "/res"
 
-    for value in extract_with:
-        e_script, run = value
+    for e_value in extract_with:
+        e_script, run = e_value
 
         if not run:
             continue
@@ -69,24 +71,24 @@ for value in deblur_with:
 
         print("Running extraction script - " + extraction_file)
 
-        res = call(["python", "main.py", d_result], cwd=extraction_path)
+        call(["python", "main.py", d_result, d_script] + ground_truth, cwd=extraction_path)
 
-for value in extract_with:
-    e_script, _ = value
-    e_result = "../../_extraction/" + e_script + "/res"
+for d_value in deblur_with:
+    d_script, _ = d_value
+    for e_value in extract_with:
+        e_script, _ = e_value
+        e_result = "../../_extraction/" + e_script + "/res/" + d_script
 
-    for value in ocr_with:
-        o_script, run = value
+        for o_value in ocr_with:
+            o_script, run = o_value
 
-        if not run:
-            continue
+            if not run:
+                continue
 
-        ocr_path = "_ocr/" + o_script
-        ocr_file = ocr_path + "/main.py"
+            ocr_path = "_ocr/" + o_script
+            ocr_file = ocr_path + "/main.py"
+            output_path = d_script + "/" + e_script
 
-        print("Running OCR script - " + ocr_file)
+            print("Running OCR script - " + ocr_file)
 
-        res = call(["python", "main.py", e_result] + ground_truth, cwd=ocr_path)
-
-        # run ocr script
-        continue
+            res = call(["python", "main.py", e_result, output_path], cwd=ocr_path)

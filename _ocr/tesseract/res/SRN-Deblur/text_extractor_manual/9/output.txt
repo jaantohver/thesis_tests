@@ -1,0 +1,9 @@
+märkused - aad - 12.5
+kehtivkuni -  - 0.0
+loaliik - e - 0.0
+väljaandmisekohtjakuupäev - oaa - 8.0
+residencepermit - tttrmt - 20.0
+nimi - kj - 0.0
+elamisluba - elamisluba - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 20.071428571428573%
