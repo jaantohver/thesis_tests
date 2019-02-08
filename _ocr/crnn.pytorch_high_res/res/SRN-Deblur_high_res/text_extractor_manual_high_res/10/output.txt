@@ -1,0 +1,9 @@
+eesnimed - eenimed - 87.5
+sünniaeg - sunniabg - 75.0
+kehtivkuni - kemovkuni - 70.0
+isikukood - skukood - 77.77777777777779
+dokumendinumber - coxumenonnumber - 73.33333333333333
+kodakondsus - nodanoncsus - 72.72727272727273
+sugu - sugu - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 79.47691197691199%

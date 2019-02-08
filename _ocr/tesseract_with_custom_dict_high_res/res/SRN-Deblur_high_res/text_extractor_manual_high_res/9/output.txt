@@ -1,0 +1,9 @@
+eesnimed - eesnimed - 100.0
+sünniaeg - sumimiaeg - 55.55555555555556
+kehtivkuni - kehtivkuni - 100.0
+isikukood - tskjkdod - 55.55555555555556
+dokumendinumber - dokumendnumber - 93.33333333333333
+kodakondsus - kddakdondsus - 83.33333333333334
+sugu - susu - 75.0
+True count =  2; false count = 5; accuracy = 28.571428571428573%
+Relative accuracy = 80.39682539682539%

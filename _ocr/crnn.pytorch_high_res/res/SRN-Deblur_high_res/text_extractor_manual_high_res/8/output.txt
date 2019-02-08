@@ -1,0 +1,9 @@
+eesnimed - eenimed - 87.5
+sünniaeg - sunniaeg - 87.5
+kehtivkuni - kehtiviuni - 90.0
+isikukood - ikjrdod - 44.44444444444444
+dokumendinumber - docmendanomber - 73.33333333333333
+kodakondsus - idomiondsus - 54.54545454545454
+sugu - sugu - 100.0
+True count =  1; false count = 6; accuracy = 14.285714285714286%
+Relative accuracy = 76.76046176046177%

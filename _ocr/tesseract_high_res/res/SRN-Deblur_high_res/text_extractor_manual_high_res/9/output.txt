@@ -1,0 +1,9 @@
+eesnimed - eesnimed - 100.0
+sünniaeg - sunniaeg - 87.5
+kehtivkuni - kehtivkuni - 100.0
+isikukood - tskjwood - 55.55555555555556
+dokumendinumber - dokumendinumber - 100.0
+kodakondsus - kodakond545 - 72.72727272727273
+sugu - sugu - 100.0
+True count =  4; false count = 3; accuracy = 57.142857142857146%
+Relative accuracy = 87.96897546897547%

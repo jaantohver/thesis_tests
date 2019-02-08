@@ -1,0 +1,16 @@
+--------------------------------------------------------------------------------
+Processing file models/model.py
+ outputting to models/model_upgraded.py
+--------------------------------------------------------------------------------
+
+models/model.py Line 87
+--------------------------------------------------------------------------------
+
+Added keyword `concat_dim` to reordered function `tf.concat`
+
+    Old:                     inp_all = tf.concat([inp_blur, inp_pred], axis=3, name='inp')
+                                                                                           
+    New:                     inp_all = tf.concat(concat_dim=[inp_blur, inp_pred], axis=3, name='inp')
+                                                 ~~~~~~~~~~~                                          
+
+

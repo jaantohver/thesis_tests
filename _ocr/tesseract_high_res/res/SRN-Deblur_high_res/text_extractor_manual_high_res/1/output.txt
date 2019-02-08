@@ -1,0 +1,9 @@
+eesnimed - eesnimed - 100.0
+sünniaeg - sünniaeg - 100.0
+kehtivkuni - kehtivkuni - 100.0
+isikukood - isikukood - 100.0
+dokumendinumber - dokumendinumber - 100.0
+kodakondsus - kodakondsus - 100.0
+sugu - sugu - 100.0
+True count =  7; false count = 0; accuracy = 100.0%
+Relative accuracy = 100.00000000000001%
