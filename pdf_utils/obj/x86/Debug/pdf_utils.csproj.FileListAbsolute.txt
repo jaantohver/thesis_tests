@@ -1,0 +1,14 @@
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/pdf_utils.exe
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/pdf_utils.pdb
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/obj/x86/Debug/pdf_utils.csprojAssemblyReference.cache
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/obj/x86/Debug/pdf_utils.csproj.CoreCompileInputs.cache
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/obj/x86/Debug/pdf_utils.exe
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/obj/x86/Debug/pdf_utils.pdb
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/itextsharp.dll
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/itextsharp.xml
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/obj/x86/Debug/pdf_utils.csproj.CopyComplete
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/Ghostscript.NET.dll
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/ImageResizer.dll
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/System.Drawing.Common.dll
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/ImageResizer.xml
+/Users/jaan/Projects/kool/thesis/thesis_tests/pdf_utils/bin/Debug/Ghostscript.NET.xml
